@@ -1,0 +1,12 @@
+baseURL = "https://kanata2.github.io"
+languageCode = "ja-JP"
+title = "kanata2.github.io"
+theme = "basics"
+
+enableemoji = true
+hascjklanguage = true
+
+[params]
+  author = "Naoki Kanatani"
+  github = "kanata2"
+  gitlab = "kanata2"
