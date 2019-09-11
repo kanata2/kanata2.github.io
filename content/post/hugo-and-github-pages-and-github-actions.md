@@ -1,7 +1,7 @@
 ---
 title: Hugo + GitHub Pages + GitHub Actions でこの記事を世に届けている
 date: 2019-09-11T12:10:48+09:00
-draft: true
+draft: false 
 ---
 
 最近自分のアカウントも GitHub Actions が有効になったので、  
