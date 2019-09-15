@@ -1,12 +1,82 @@
 baseURL = "https://kanata2.github.io"
-languageCode = "ja-JP"
-title = "kanata2.github.io"
-theme = "basics"
+languageCode = "ja"
+defaultContentLanguage = "ja-jp"
+title = "back of flyer"
+theme = "slick"
 
 enableemoji = true
+googleAnalytics = "UA-108121460-1"
 hascjklanguage = true
+mathjax = true
+
+pygmentsCodefences = true               # Enable highlighting inside codefences
+pygmentsCodeFencesGuessSyntax = true    # Highlight code without language tag
+pygmentsUseClasses = true               # Use external style sheet
+pygmentsUseClassic = false              # Force use of chroma
+
+canonifyURLs = true
+preserveTaxonomyNames = true
+
+paginate = 10
+paginatePath = "page"
 
 [params]
-  author = "Naoki Kanatani"
-  github = "kanata2"
-  gitlab = "kanata2"
+  css = "custom.css"
+  showFullContent = true
+  showMetaDates = true
+
+[taxonomies]
+  tags = "tags"
+  categories = "categories"
+
+[author]
+  name = "Naoki Kanatani"
+
+[menu]
+  [[menu.main]]
+    identifier = "post"
+    name = "Posts"
+    title = "All posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    title = "All categories"
+    url = "/categories/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    title = "All tags"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.meta]]
+    identifier = "categories"
+    name = "Categories"
+    weight = 1
+  [[menu.meta]]
+    identifier = "tags"
+    name = "Tags"
+    weight = 2
+
+  [[menu.footer]]
+    name = "GitHub"
+    title = "kanata2"
+    url = "https://github.com/kanata2"
+    weight = 1
+
+  [[menu.footer]]
+    name = "GitLab"
+    title = "kanata2"
+    url = "https://gitlab.com/kanata2"
+    weight = 2
+
+  [[menu.footer]]
+    name = "Twitter"
+    title = "kanata2n"
+    url = "https://twitter.com/kanata2n"
+    weight = 3
