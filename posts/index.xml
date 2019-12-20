@@ -1,4 +1,65 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on back of flyer</title><link>https://kanata2.github.io/posts/</link><description>Recent content in Posts on back of flyer</description><generator>Hugo 0.58.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 11 Sep 2019 12:10:48 +0900</lastBuildDate><atom:link href="https://kanata2.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo &#43; GitHub Pages &#43; GitHub Actions でこの記事を世に届けている</title><link>https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/</link><pubDate>Wed, 11 Sep 2019 12:10:48 +0900</pubDate><guid isPermaLink="true">https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on back of flyer</title><link>https://kanata2.github.io/posts/</link><description>Recent content in Posts on back of flyer</description><generator>Hugo 0.58.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 20 Dec 2019 10:00:00 +0900</lastBuildDate><atom:link href="https://kanata2.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>ElastiCache のノードタイプを変更する際の注意点</title><link>https://kanata2.github.io/posts/elasticache-scaleup/</link><pubDate>Fri, 20 Dec 2019 10:00:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.github.io/posts/elasticache-scaleup/</guid><description>
+&lt;p&gt;注意: この記事は &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を知っていれば(ほぼ)読む必要はありません。&lt;/p&gt;
+&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
+&lt;p&gt;今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。&lt;br /&gt;
+しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。&lt;br /&gt;
+(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)&lt;/p&gt;
+&lt;h3 id=&#34;原因-事前にやっておくべきこと&#34;&gt;原因・事前にやっておくべきこと&lt;/h3&gt;
+&lt;p&gt;結論から述べると、&lt;a href=&#34;https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html&#34;&gt;ドキュメント&lt;/a&gt;に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。&lt;br /&gt;
+AWS CLI であれば &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を使うのが良いです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleUpModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.10xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.12xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.24xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.4xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.8xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.16xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.4xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.8xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.12xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.24xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.4xlarge&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleDownModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.2xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.large&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.medium&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.2xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.large&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.2xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.large&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.large&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.xlarge&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.medium&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.micro&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.small&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.medium&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.micro&amp;#34;&lt;/span&gt;,
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.small&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;なぜ変更できないのか&#34;&gt;なぜ変更できないのか&lt;/h3&gt;
+&lt;p&gt;ドキュメントには詳細な仕様は明記されていません。&lt;br /&gt;
+今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。&lt;br /&gt;
+また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。&lt;/p&gt;
+&lt;h3 id=&#34;どうしても変更したい&#34;&gt;どうしても変更したい&lt;/h3&gt;
+&lt;p&gt;という場合もあるかと思います。その場合は、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;同ノードタイプの現在よりメモリの小さいものに一旦変更
+&lt;ul&gt;
+&lt;li&gt;例: m4.4xlarge -&amp;gt; m4.2xlarge&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;当初変更予定だったノードタイプに変更
+&lt;ul&gt;
+&lt;li&gt;例: m4.2xlarge -&amp;gt; m5.4xlarge&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)&lt;/p&gt;</description></item><item><title>Hugo &#43; GitHub Pages &#43; GitHub Actions でこの記事を世に届けている</title><link>https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/</link><pubDate>Wed, 11 Sep 2019 12:10:48 +0900</pubDate><guid isPermaLink="true">https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/</guid><description>
 &lt;p&gt;最近自分のアカウントも GitHub Actions が有効になったので、&lt;br /&gt;
 早速使ってみようと思いこの GitHub Pages を Actions でリリースするようにしてみた。&lt;br /&gt;
 実際の YAML を見るのが早いと思うので貼る。以下の通り。&lt;/p&gt;

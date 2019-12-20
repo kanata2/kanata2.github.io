@@ -1,4 +1,41 @@
-<!doctype html><html lang=ja><head><meta charset=utf-8><title>back of flyer</title><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=description content><meta name=author content="Naoki Kanatani"><meta name=generator content="Hugo 0.58.1"><link href=https://kanata2.github.io/index.xml rel=alternate type=application/rss+xml title="back of flyer Feed"><!--[if lte IE 8]><link rel=stylesheet href=https://kanata2.github.io/assets/style-compat.css><![endif]--><!--[if gt IE 8]><!--><link rel=stylesheet href=https://kanata2.github.io/assets/style.css><!--<![endif]--></head><body><div class=pure-g><div class="pure-u-1-24 pure-u-md-5-24"></div><div class="pure-u-22-24 pure-u-md-14-24"><div class=navigation><div class="navigation-header clearfix"><div class="pure-menu pure-menu-horizontal"><a class="pure-menu-heading pure-menu-link" href=https://kanata2.github.io/>back of flyer</a></div></div><div class=navigation-content><div class="pure-menu pure-menu-horizontal"><ul class=pure-menu-list><li class=pure-menu-item title="All posts"><a class=pure-menu-link href=https://kanata2.github.io/posts/>Posts</a></li><li class=pure-menu-item title="All categories"><a class=pure-menu-link href=https://kanata2.github.io/categories/>Categories</a></li><li class=pure-menu-item title="All tags"><a class=pure-menu-link href=https://kanata2.github.io/tags/>Tags</a></li><li class=pure-menu-item title="About me"><a class=pure-menu-link href=https://kanata2.github.io/about/>About</a></li></ul></div></div></div><div><div><h2 class=post-title><a href=https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/>Hugo &#43; GitHub Pages &#43; GitHub Actions でこの記事を世に届けている</a></h2><div class=post-meta><span>Date</span> &#x5b;
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>back of flyer</title><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=description content><meta name=author content="Naoki Kanatani"><meta name=generator content="Hugo 0.58.1"><link href=https://kanata2.github.io/index.xml rel=alternate type=application/rss+xml title="back of flyer Feed"><!--[if lte IE 8]><link rel=stylesheet href=https://kanata2.github.io/assets/style-compat.css><![endif]--><!--[if gt IE 8]><!--><link rel=stylesheet href=https://kanata2.github.io/assets/style.css><!--<![endif]--></head><body><div class=pure-g><div class="pure-u-1-24 pure-u-md-5-24"></div><div class="pure-u-22-24 pure-u-md-14-24"><div class=navigation><div class="navigation-header clearfix"><div class="pure-menu pure-menu-horizontal"><a class="pure-menu-heading pure-menu-link" href=https://kanata2.github.io/>back of flyer</a></div></div><div class=navigation-content><div class="pure-menu pure-menu-horizontal"><ul class=pure-menu-list><li class=pure-menu-item title="All posts"><a class=pure-menu-link href=https://kanata2.github.io/posts/>Posts</a></li><li class=pure-menu-item title="All categories"><a class=pure-menu-link href=https://kanata2.github.io/categories/>Categories</a></li><li class=pure-menu-item title="All tags"><a class=pure-menu-link href=https://kanata2.github.io/tags/>Tags</a></li><li class=pure-menu-item title="About me"><a class=pure-menu-link href=https://kanata2.github.io/about/>About</a></li></ul></div></div></div><div><div><h2 class=post-title><a href=https://kanata2.github.io/posts/elasticache-scaleup/>ElastiCache のノードタイプを変更する際の注意点</a></h2><div class=post-meta><span>Date</span> &#x5b;
+<time datetime=2019-12-20T10:00:00&#43;09:00>20 Dec 19 10:00 &#43;0900</time>
+&#x5d;</div></div><div><p>注意: この記事は <code>aws elasticache list-allowed-node-type-modifications</code> を知っていれば(ほぼ)読む必要はありません。</p><h3 id=背景>背景</h3><p>今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。<br>しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。<br>(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)</p><h3 id=原因-事前にやっておくべきこと>原因・事前にやっておくべきこと</h3><p>結論から述べると、<a href=https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html>ドキュメント</a>に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。<br>AWS CLI であれば <code>aws elasticache list-allowed-node-type-modifications</code> を使うのが良いです。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
+<span class=o>{</span>
+    <span class=s2>&#34;ScaleUpModifications&#34;</span>: <span class=o>[</span>
+        <span class=s2>&#34;cache.m4.10xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m5.12xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m5.24xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.4xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.8xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.16xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.4xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.8xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.12xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.24xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.4xlarge&#34;</span>
+    <span class=o>]</span>,
+    <span class=s2>&#34;ScaleDownModifications&#34;</span>: <span class=o>[</span>
+        <span class=s2>&#34;cache.m3.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m3.large&#34;</span>,
+        <span class=s2>&#34;cache.m3.medium&#34;</span>,
+        <span class=s2>&#34;cache.m3.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m4.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m4.large&#34;</span>,
+        <span class=s2>&#34;cache.m4.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.large&#34;</span>,
+        <span class=s2>&#34;cache.r3.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.large&#34;</span>,
+        <span class=s2>&#34;cache.r4.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.t2.medium&#34;</span>,
+        <span class=s2>&#34;cache.t2.micro&#34;</span>,
+        <span class=s2>&#34;cache.t2.small&#34;</span>,
+        <span class=s2>&#34;cache.t3.medium&#34;</span>,
+        <span class=s2>&#34;cache.t3.micro&#34;</span>,
+        <span class=s2>&#34;cache.t3.small&#34;</span>
+    <span class=o>]</span>
+<span class=o>}</span></code></pre></div><h3 id=なぜ変更できないのか>なぜ変更できないのか</h3><p>ドキュメントには詳細な仕様は明記されていません。<br>今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。<br>また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。</p><h3 id=どうしても変更したい>どうしても変更したい</h3><p>という場合もあるかと思います。その場合は、</p><ol><li>同ノードタイプの現在よりメモリの小さいものに一旦変更<ul><li>例: m4.4xlarge -&gt; m4.2xlarge</li></ul></li><li>当初変更予定だったノードタイプに変更<ul><li>例: m4.2xlarge -&gt; m5.4xlarge</li></ul></li></ol><p>という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)</p></div></div><div class=post-divider><div><h2 class=post-title><a href=https://kanata2.github.io/posts/hugo-and-github-pages-and-github-actions/>Hugo &#43; GitHub Pages &#43; GitHub Actions でこの記事を世に届けている</a></h2><div class=post-meta><span>Date</span> &#x5b;
 <time datetime=2019-09-11T12:10:48&#43;09:00>11 Sep 19 12:10 &#43;0900</time>
 &#x5d;</div></div><div><p>最近自分のアカウントも GitHub Actions が有効になったので、<br>早速使ってみようと思いこの GitHub Pages を Actions でリリースするようにしてみた。<br>実際の YAML を見るのが早いと思うので貼る。以下の通り。</p><div class=highlight><pre class=chroma><code class=language-yaml data-lang=yaml>name<span class=p>:</span><span class=w> </span>publish<span class=w>
 </span><span class=w>

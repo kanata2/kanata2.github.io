@@ -1,0 +1,42 @@
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>ElastiCache のノードタイプを変更する際の注意点 | back of flyer</title><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=description content="注意: この記事は aws elasticache list-allowed-node-type-modifications を知っていれば(ほぼ)読む必要はありません。 背景 今見ているサービスで RI の購入タイミングになったので、m4.4xlarg"><meta name=author content="Naoki Kanatani"><meta name=generator content="Hugo 0.58.1"><link href=https://kanata2.github.io/index.xml rel=alternate type=application/rss+xml title="back of flyer Feed"><!--[if lte IE 8]><link rel=stylesheet href=https://kanata2.github.io/assets/style-compat.css><![endif]--><!--[if gt IE 8]><!--><link rel=stylesheet href=https://kanata2.github.io/assets/style.css><!--<![endif]--></head><body><div class=pure-g><div class="pure-u-1-24 pure-u-md-5-24"></div><div class="pure-u-22-24 pure-u-md-14-24"><div class=navigation><div class="navigation-header clearfix"><div class="pure-menu pure-menu-horizontal"><a class="pure-menu-heading pure-menu-link" href=https://kanata2.github.io/>back of flyer</a></div></div><div class=navigation-content><div class="pure-menu pure-menu-horizontal"><ul class=pure-menu-list><li class=pure-menu-item title="All posts"><a class=pure-menu-link href=https://kanata2.github.io/posts/>Posts</a></li><li class=pure-menu-item title="All categories"><a class=pure-menu-link href=https://kanata2.github.io/categories/>Categories</a></li><li class=pure-menu-item title="All tags"><a class=pure-menu-link href=https://kanata2.github.io/tags/>Tags</a></li><li class=pure-menu-item title="About me"><a class=pure-menu-link href=https://kanata2.github.io/about/>About</a></li></ul></div></div></div><div><div><h2 class=post-title>ElastiCache のノードタイプを変更する際の注意点</h2><div class=post-meta><span>Date</span> &#x5b;
+<time datetime=2019-12-20T10:00:00&#43;09:00>20 Dec 19 10:00 &#43;0900</time>
+&#x5d;</div></div><div><p>注意: この記事は <code>aws elasticache list-allowed-node-type-modifications</code> を知っていれば(ほぼ)読む必要はありません。</p><h3 id=背景>背景</h3><p>今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。<br>しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。<br>(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)</p><h3 id=原因-事前にやっておくべきこと>原因・事前にやっておくべきこと</h3><p>結論から述べると、<a href=https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html>ドキュメント</a>に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。<br>AWS CLI であれば <code>aws elasticache list-allowed-node-type-modifications</code> を使うのが良いです。</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
+<span class=o>{</span>
+    <span class=s2>&#34;ScaleUpModifications&#34;</span>: <span class=o>[</span>
+        <span class=s2>&#34;cache.m4.10xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m5.12xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m5.24xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.4xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.8xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.16xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.4xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.8xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.12xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.24xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r5.4xlarge&#34;</span>
+    <span class=o>]</span>,
+    <span class=s2>&#34;ScaleDownModifications&#34;</span>: <span class=o>[</span>
+        <span class=s2>&#34;cache.m3.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m3.large&#34;</span>,
+        <span class=s2>&#34;cache.m3.medium&#34;</span>,
+        <span class=s2>&#34;cache.m3.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m4.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.m4.large&#34;</span>,
+        <span class=s2>&#34;cache.m4.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.2xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r3.large&#34;</span>,
+        <span class=s2>&#34;cache.r3.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.r4.large&#34;</span>,
+        <span class=s2>&#34;cache.r4.xlarge&#34;</span>,
+        <span class=s2>&#34;cache.t2.medium&#34;</span>,
+        <span class=s2>&#34;cache.t2.micro&#34;</span>,
+        <span class=s2>&#34;cache.t2.small&#34;</span>,
+        <span class=s2>&#34;cache.t3.medium&#34;</span>,
+        <span class=s2>&#34;cache.t3.micro&#34;</span>,
+        <span class=s2>&#34;cache.t3.small&#34;</span>
+    <span class=o>]</span>
+<span class=o>}</span></code></pre></div><h3 id=なぜ変更できないのか>なぜ変更できないのか</h3><p>ドキュメントには詳細な仕様は明記されていません。<br>今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。<br>また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。</p><h3 id=どうしても変更したい>どうしても変更したい</h3><p>という場合もあるかと思います。その場合は、</p><ol><li>同ノードタイプの現在よりメモリの小さいものに一旦変更<ul><li>例: m4.4xlarge -&gt; m4.2xlarge</li></ul></li><li>当初変更予定だったノードタイプに変更<ul><li>例: m4.2xlarge -&gt; m5.4xlarge</li></ul></li></ol><p>という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)</p></div></div><div class=footer><div class="pure-menu pure-menu-horizontal"><ul class=pure-menu-list><li class=pure-menu-item title=kanata2><a class=pure-menu-link href=https://github.com/kanata2>GitHub</a></li><li class=pure-menu-item title=kanata2><a class=pure-menu-link href=https://gitlab.com/kanata2>GitLab</a></li><li class=pure-menu-item title=kanata2n><a class=pure-menu-link href=https://twitter.com/kanata2n>Twitter</a></li><li class=pure-menu-item title="RSS Feed"><a href=https://kanata2.github.io/index.xml class=pure-menu-link>RSS</a></li><li class="pure-menu-item fix-cursor-pointer" title="Go to top"><a class=pure-menu-link id=btn-gototop><span class=fix-placement-up>&#x21e7;&#xfe0e;</span></a></li></ul></div></div><script>function setElementsClass(selector,value){Array.prototype.forEach.call(document.querySelectorAll(selector),function(elem){elem.className=value;});}
+setElementsClass('img','pure-img');setElementsClass('table','pure-table');function onResize(){Array.prototype.forEach.call([{selector:'.pure-menu',hi:'pure-menu pure-menu-horizontal',lo:'pure-menu'},{selector:'.navigation-header-subtitle',hi:'pure-menu-list navigation-header-subtitle pull-end',lo:'pure-menu-list navigation-header-subtitle'},{selector:'.navigation-header',hi:'navigation-header clearfix',lo:'navigation-header'}],function(elem){setElementsClass(elem.selector,document.documentElement.clientWidth>=768?elem.hi:elem.lo);});}
+onResize();window.addEventListener('resize',onResize);document.getElementById('btn-gototop').addEventListener('click',function(){function scroll(){if(window.pageYOffset>0){setTimeout(scroll,8);}
+window.scroll(0,window.pageYOffset-128);}
+scroll();});</script></div><div class="pure-u-1-24 pure-u-md-5-24"></div></div></body></html>
