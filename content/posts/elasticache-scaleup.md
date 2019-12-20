@@ -1,6 +1,7 @@
 ---
 title: ElastiCache のノードタイプを変更する際の注意点
 date: 2019-12-20T10:00:00+09:00
+tags: ["aws"]
 draft: false 
 ---
 
