@@ -1,5 +1,5 @@
 ---
-title: "2020/04/28 BAROCCO MD770 と Kraken が届いた"
+title: "2020/04/28 BAROCCO MD770 と Kraken X が届いた"
 date: 2020-04-29T02:42:26+09:00
 categories: ["daily"]
 tags: ["keyboard", "audio", "zoom"]
@@ -21,15 +21,15 @@ tags: ["keyboard", "audio", "zoom"]
 感想まとめ
 
 - 良い点
-  - バックライトがきれいでテンション上がる
-  - セパレート型なので自由に配置可能
-  - Mac 向けの設定があって便利
+    - バックライトがきれいでテンション上がる
+    - セパレート型なので自由に配置可能
+    - Mac 向けの設定があって便利
 - 大変な点
-  - 不慣れたためにタイミング速度がかなり落ちる
-  - ちょっと腕が疲れるかもしれない
-    - パームレストとか買ったほうが良いのかな
-  - 一番右の列は個人的に不要
-    - 間違えて押すことがかなり多い
+    - 不慣れたためにタイミング速度がかなり落ちる
+    - ちょっと腕が疲れるかもしれない
+        - パームレストとか買ったほうが良いのかな
+    - 一番右の列は個人的に不要
+        - 間違えて押すことがかなり多い
     - MBP がスリープから復帰するとキーボードを認識しなくなる
 
 ちなみに、けっこう人気っぽい。Amazon はすでに売り切れていたのでツクモで買った。
@@ -51,7 +51,7 @@ tags: ["keyboard", "audio", "zoom"]
 
  - 自宅開発環境
  - Terraform の資格試験
-   - https://www.hashicorp.com/certification/
+     - https://www.hashicorp.com/certification/
  - フルリモートワークとVPN、ゼロトラストネットワーク
  - https://github.com/GoogleCloudPlatform/berglas
  - 時限でイベントをトリガーする仕組み
