@@ -1,12 +1,12 @@
 ---
-title: "2020/04/28 BAROCCO MD770 と Kraken X が届いた"
+title: "2020/04/28"
 date: 2020-04-29T02:42:26+09:00
 categories: ["daily"]
 tags: ["keyboard", "audio", "zoom"]
 ---
 
 
-(この記事はただの日記です。)
+この記事は新しく買ったものが届いて嬉しくなって書いたただの日記です。
 
 ### BAROCCO MD770
 これ: https://www.archisite.co.jp/products/mistel/barocco-md770-rgb/
