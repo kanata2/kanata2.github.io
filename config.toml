@@ -58,6 +58,7 @@ paginatePath = "page"
     identifier = "categories"
     name = "Categories"
     weight = 1
+
   [[menu.meta]]
     identifier = "tags"
     name = "Tags"
