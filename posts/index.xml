@@ -1,243 +1,254 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on back of flyer</title><link>https://kanata2.dev/posts/</link><description>Recent content in Posts on back of flyer</description><generator>Hugo 0.58.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 24 May 2020 00:31:27 +0900</lastBuildDate><atom:link href="https://kanata2.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2020/05/24 自粛期間とリモートワークと自分</title><link>https://kanata2.dev/posts/2020-05-24-remote-work-with-me/</link><pubDate>Sun, 24 May 2020 00:31:27 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-05-24-remote-work-with-me/</guid><description>
-&lt;p&gt;緊急事態宣言が25日に解除になりそうな雰囲気が出てきた。&lt;br /&gt;
-会社として解除後どうなるかは分からないが、一旦約2ヶ月のフルリモートワーク期間を振り返ってみる。&lt;/p&gt;
-&lt;h3 id=&#34;良かったこと&#34;&gt;良かったこと&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;自宅環境に投資できた
-&lt;ul&gt;
-&lt;li&gt;これまで買い渋っていたキーボードやモニター等購入に踏み切れた&lt;/li&gt;
-&lt;li&gt;オフィスより開発環境が良くなっている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;通勤時間がなくなった&lt;/li&gt;
-&lt;li&gt;外食をしなくなった&lt;/li&gt;
-&lt;li&gt;技術検証系の業務に集中できた&lt;/li&gt;
-&lt;li&gt;アイドルやアーティストなどのオンラインコンテンツが充実した&lt;/li&gt;
-&lt;li&gt;読書の時間を確保できるようになった&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通勤時間がなくなったのは特に良かった。毎朝の満員電車生活はやっぱりきつい。&lt;/p&gt;
-&lt;h3 id=&#34;良くなかったこと&#34;&gt;良くなかったこと&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;生活リズムがおかしくなる&lt;/li&gt;
-&lt;li&gt;ライブやスポーツ観戦が一切できない&lt;/li&gt;
-&lt;li&gt;外に出るのが億劫になる&lt;/li&gt;
-&lt;li&gt;定時内に集中できなかったときは夜中に一気に仕事をする&lt;/li&gt;
-&lt;li&gt;仕事のパフォーマンスにかなり波がある&lt;/li&gt;
-&lt;li&gt;光熱費や飲み物への出費がかさむ&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;仕事については改善の余地ありそう。&lt;/p&gt;
-&lt;h3 id=&#34;気をつけていること&#34;&gt;気をつけていること&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;仕事で雑談を増やすようにしてる
-&lt;ul&gt;
-&lt;li&gt;オンライン勉強会とか週1で技術雑談するとか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;チャットの使い方
-&lt;ul&gt;
-&lt;li&gt;あとで反省することも多いけど&amp;hellip;&lt;/li&gt;
-&lt;li&gt;ハイコンテクストな文章は避ける・きつめに受け取られそうな文章は書かない等&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;自分だけが気をつけても効果は薄いので、各々が気をつけられるようになると良いと思う。&lt;/p&gt;
-&lt;h3 id=&#34;気づいたこと&#34;&gt;気づいたこと&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;パフォーマンスが良くなっているのか悪くなっているのか分からないがフルリモート自体は意外と問題ない&lt;/li&gt;
-&lt;li&gt;今までは気付きにくかったような会社の問題がけっこう見えてくる
-&lt;ul&gt;
-&lt;li&gt;会社の問題と書くとネガティブに見えるけど自分は改善ポイントが見えて良かったと思ってる派&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;蒙古タンメン中本に納豆を入れるとめちゃくちゃおいしい
-&lt;ul&gt;
-&lt;li&gt;納豆はひき割りのほうが良い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;部屋の電気が暗い
-&lt;ul&gt;
-&lt;li&gt;確実に目が悪くなっている気がする。はやく買おう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;運動が少ない
-&lt;ul&gt;
-&lt;li&gt;自粛という事情がないただのリモートであれば運動ももう少し活発にするはず&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;料理が下手&lt;/li&gt;
-&lt;li&gt;引っ越したい
-&lt;ul&gt;
-&lt;li&gt;合わせて都内でそこそこ良い家は家賃が高いことにも気付いた(それはそう)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ゲームをやりすぎる&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>2020/05/23 日記</title><link>https://kanata2.dev/posts/2020-05-23-this-work-you-only-can-do/</link><pubDate>Sat, 23 May 2020 03:36:02 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-05-23-this-work-you-only-can-do/</guid><description>
-&lt;p&gt;眠れないので日記を書く。&lt;/p&gt;
-&lt;h3 id=&#34;モニター-買った&#34;&gt;モニター、買った&lt;/h3&gt;
-&lt;p&gt;前回の記事を書いてからすぐにモニターを買う決心がついたので購入した。&lt;br /&gt;
-買ったのはこれ &lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07XYVNHGH/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&amp;amp;psc=1&#34;&gt;https://www.amazon.co.jp/gp/product/B07XYVNHGH/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&amp;amp;psc=1&lt;/a&gt;&lt;br /&gt;
-使い始めて3週間ほど経ったけど、1画面に多くの情報を詰め込める点は良いなと感じている一方で、Mac の Retina ディスプレイに見慣れてるとけっこう見づらさが気になるのが辛かったりもする。ただ、買ってよかったとは思っているし、実際にデスクで作業する時間が圧倒的に増えた。&lt;/p&gt;
-&lt;h3 id=&#34;トラックパッドがほしい&#34;&gt;トラックパッドがほしい&lt;/h3&gt;
-&lt;p&gt;BAROCCO を買ったはいいが、トラックパッドのために Mac を開いてなければならないのがちょっとつらい。手の移動距離も長いし。&lt;br /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on back of flyer</title><link>https://kanata2.dev/posts/</link><description>Recent content in Posts on back of flyer</description><generator>Hugo 0.75.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 24 May 2020 00:31:27 +0900</lastBuildDate><atom:link href="https://kanata2.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2020/05/24 自粛期間とリモートワークと自分</title><link>https://kanata2.dev/posts/2020-05-24-remote-work-with-me/</link><pubDate>Sun, 24 May 2020 00:31:27 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-05-24-remote-work-with-me/</guid><description>&lt;p>緊急事態宣言が25日に解除になりそうな雰囲気が出てきた。&lt;br>
+会社として解除後どうなるかは分からないが、一旦約2ヶ月のフルリモートワーク期間を振り返ってみる。&lt;/p>
+&lt;h3 id="良かったこと">良かったこと&lt;/h3>
+&lt;ul>
+&lt;li>自宅環境に投資できた
+&lt;ul>
+&lt;li>これまで買い渋っていたキーボードやモニター等購入に踏み切れた&lt;/li>
+&lt;li>オフィスより開発環境が良くなっている&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>通勤時間がなくなった&lt;/li>
+&lt;li>外食をしなくなった&lt;/li>
+&lt;li>技術検証系の業務に集中できた&lt;/li>
+&lt;li>アイドルやアーティストなどのオンラインコンテンツが充実した&lt;/li>
+&lt;li>読書の時間を確保できるようになった&lt;/li>
+&lt;/ul>
+&lt;p>通勤時間がなくなったのは特に良かった。毎朝の満員電車生活はやっぱりきつい。&lt;/p>
+&lt;h3 id="良くなかったこと">良くなかったこと&lt;/h3>
+&lt;ul>
+&lt;li>生活リズムがおかしくなる&lt;/li>
+&lt;li>ライブやスポーツ観戦が一切できない&lt;/li>
+&lt;li>外に出るのが億劫になる&lt;/li>
+&lt;li>定時内に集中できなかったときは夜中に一気に仕事をする&lt;/li>
+&lt;li>仕事のパフォーマンスにかなり波がある&lt;/li>
+&lt;li>光熱費や飲み物への出費がかさむ&lt;/li>
+&lt;/ul>
+&lt;p>仕事については改善の余地ありそう。&lt;/p>
+&lt;h3 id="気をつけていること">気をつけていること&lt;/h3>
+&lt;ul>
+&lt;li>仕事で雑談を増やすようにしてる
+&lt;ul>
+&lt;li>オンライン勉強会とか週1で技術雑談するとか&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>チャットの使い方
+&lt;ul>
+&lt;li>あとで反省することも多いけど&amp;hellip;&lt;/li>
+&lt;li>ハイコンテクストな文章は避ける・きつめに受け取られそうな文章は書かない等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>自分だけが気をつけても効果は薄いので、各々が気をつけられるようになると良いと思う。&lt;/p>
+&lt;h3 id="気づいたこと">気づいたこと&lt;/h3>
+&lt;ul>
+&lt;li>パフォーマンスが良くなっているのか悪くなっているのか分からないがフルリモート自体は意外と問題ない&lt;/li>
+&lt;li>今までは気付きにくかったような会社の問題がけっこう見えてくる
+&lt;ul>
+&lt;li>会社の問題と書くとネガティブに見えるけど自分は改善ポイントが見えて良かったと思ってる派&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>蒙古タンメン中本に納豆を入れるとめちゃくちゃおいしい
+&lt;ul>
+&lt;li>納豆はひき割りのほうが良い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>部屋の電気が暗い
+&lt;ul>
+&lt;li>確実に目が悪くなっている気がする。はやく買おう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>運動が少ない
+&lt;ul>
+&lt;li>自粛という事情がないただのリモートであれば運動ももう少し活発にするはず&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>料理が下手&lt;/li>
+&lt;li>引っ越したい
+&lt;ul>
+&lt;li>合わせて都内でそこそこ良い家は家賃が高いことにも気付いた(それはそう)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ゲームをやりすぎる&lt;/li>
+&lt;/ul></description></item><item><title>2020/05/23 日記</title><link>https://kanata2.dev/posts/2020-05-23-this-work-you-only-can-do/</link><pubDate>Sat, 23 May 2020 03:36:02 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-05-23-this-work-you-only-can-do/</guid><description>&lt;p>眠れないので日記を書く。&lt;/p>
+&lt;h3 id="モニター買った">モニター、買った&lt;/h3>
+&lt;p>前回の記事を書いてからすぐにモニターを買う決心がついたので購入した。&lt;br>
+買ったのはこれ &lt;a href="https://www.amazon.co.jp/gp/product/B07XYVNHGH/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&amp;amp;psc=1">https://www.amazon.co.jp/gp/product/B07XYVNHGH/ref=ppx_yo_dt_b_asin_title_o04_s01?ie=UTF8&amp;amp;psc=1&lt;/a>&lt;br>
+使い始めて3週間ほど経ったけど、1画面に多くの情報を詰め込める点は良いなと感じている一方で、Mac の Retina ディスプレイに見慣れてるとけっこう見づらさが気になるのが辛かったりもする。ただ、買ってよかったとは思っているし、実際にデスクで作業する時間が圧倒的に増えた。&lt;/p>
+&lt;h3 id="トラックパッドがほしい">トラックパッドがほしい&lt;/h3>
+&lt;p>BAROCCO を買ったはいいが、トラックパッドのために Mac を開いてなければならないのがちょっとつらい。手の移動距離も長いし。&lt;br>
 ということでここ最近は Mac の内蔵キーボード生活に戻ってきてしまった。Magic Trackpad 2 を買おうかすごく悩んでいる。
-Touch ID がとてつもなく便利(社内のサービスでも Touch ID を使えるものがあったりする)なので、Magic Trackpad に Touch ID 搭載してくれたら即買いなんだけどなー。&lt;/p&gt;
-&lt;h3 id=&#34;shirobako-の菅野さんの言葉を定期的に思い出す&#34;&gt;SHIROBAKO の菅野さんの言葉を定期的に思い出す&lt;/h3&gt;
-&lt;p&gt;特に何があったとかではないんだけど、タイミングよく思い出したので書く。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;これをわしが描く意味って何だろう。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;これとか&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;アニメーターも人間だから、この仕事はお前にしかできないって言われたいんだよね。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;これ。ちなみに第12話。&lt;/p&gt;
-&lt;p&gt;自分も何のコンテキストもなく決まった仕事をただ渡されるのはちょっと苦手かもしれない。&lt;br /&gt;
-菅野さんみたく、この仕事はお前にしかできないって言われたいのかもしれないし、&lt;br /&gt;
-せっかくプロジェクトやチームに所属しているのに、言われたことだけをやる関係性になるのが嫌なのかもしれない。&lt;br /&gt;
-自分もなにかを依頼するときは気をつけようとふと思った。&lt;/p&gt;</description></item><item><title>2020/04/28</title><link>https://kanata2.dev/posts/2020-04-29_review-barocco/</link><pubDate>Wed, 29 Apr 2020 02:42:26 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-04-29_review-barocco/</guid><description>
-&lt;p&gt;この記事は新しく買ったものが届いて嬉しくなって書いたただの日記です。&lt;/p&gt;
-&lt;h3 id=&#34;barocco-md770&#34;&gt;BAROCCO MD770&lt;/h3&gt;
-&lt;p&gt;これ: &lt;a href=&#34;https://www.archisite.co.jp/products/mistel/barocco-md770-rgb/&#34;&gt;https://www.archisite.co.jp/products/mistel/barocco-md770-rgb/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&#34;center&#34;&gt;
-&lt;img src=&#34;https://kanata2.dev/images/barocco-1.jpg&#34;/&gt; &lt;figcaption&gt;
-&lt;h4&gt;箱&lt;/h4&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&#34;center&#34;&gt;
-&lt;img src=&#34;https://kanata2.dev/images/barocco-2.jpg&#34;/&gt; &lt;figcaption&gt;
-&lt;h4&gt;キーボード&lt;/h4&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;自宅の開発環境を整えるためにも、まずはキーボードをと思って買った。単体のキーボードを買うのは人生で初めてで、普段は MacBook Pro の内蔵キーボードで過ごしている。(MBP のキーボード普通に使いやすくて好き)&lt;br /&gt;
-買うなら分割キーボードをと思っていたが、やはりすぐには慣れない。特に自分は右手の担当領域が大きいっぽくて、左分割されたキーボードのBをしきりに右手で押そうとしてしまう。矯正しないと&amp;hellip;&lt;/p&gt;
-&lt;p&gt;感想まとめ&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;良い点
-&lt;ul&gt;
-&lt;li&gt;バックライトがきれいでテンション上がる&lt;/li&gt;
-&lt;li&gt;セパレート型なので自由に配置可能&lt;/li&gt;
-&lt;li&gt;Mac 向けの設定があって便利&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;大変な点
-&lt;ul&gt;
-&lt;li&gt;不慣れたためにタイミング速度がかなり落ちる&lt;/li&gt;
-&lt;li&gt;ちょっと腕が疲れるかもしれない
-&lt;ul&gt;
-&lt;li&gt;パームレストとか買ったほうが良いのかな&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;一番右の列は個人的に不要
-&lt;ul&gt;
-&lt;li&gt;間違えて押すことがかなり多い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;MBP がスリープから復帰するとキーボードを認識しなくなる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ちなみに、けっこう人気っぽい。Amazon はすでに売り切れていたのでツクモで買った。&lt;/p&gt;
-&lt;h3 id=&#34;kraken-x&#34;&gt;Kraken X&lt;/h3&gt;
-&lt;p&gt;これ: &lt;a href=&#34;https://www2.razer.com/jp-jp/gaming-audio/razer-kraken-x&#34;&gt;https://www2.razer.com/jp-jp/gaming-audio/razer-kraken-x&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&#34;center&#34;&gt;
-&lt;img src=&#34;https://kanata2.dev/images/kraken_x.jpg&#34;/&gt; &lt;figcaption&gt;
-&lt;h4&gt;箱&lt;/h4&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;フルリモートに切り替わってオンラインミーティングがけっこう耳にダメージ与えてくるなと思ったのでキーボードを買う流れに乗ってヘッドセットを購入してみた。こちらも購入は初。普段は Pixel 3 XL を購入したときに付属されていたイヤフォンを使っていた。&lt;br /&gt;
-あんまり機能性みたいなものを求めていなかったので、おおむね満足している、、んだけどしばらく着用すると熱を帯びてくるのがしんどい。耳周りめっちゃ熱くなる。&lt;/p&gt;
-&lt;h3 id=&#34;会社で-zoom-雑談ルームを作ってみた&#34;&gt;会社で zoom 雑談ルームを作ってみた&lt;/h3&gt;
-&lt;p&gt;もともと技術の話があんまりできなかったり、エンジニア同士の交流が少ないと思っていたので、せっかくならと思ってそれらを達成する裏目標のもと雑談ルームを始めてみた。&lt;br /&gt;
-初回は2人来てくれた(少ない、、ｗ)が、2時間ぐらい色々喋れたので個人的にはやって良かった。ちょっと時間使いすぎた反省もあるので、もう少し短めにして週1ぐらいのペースでやれたらなと思う。&lt;/p&gt;
-&lt;p&gt;話した内容は&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;自宅開発環境&lt;/li&gt;
-&lt;li&gt;Terraform の資格試験
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hashicorp.com/certification/&#34;&gt;https://www.hashicorp.com/certification/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;フルリモートワークとVPN、ゼロトラストネットワーク&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/GoogleCloudPlatform/berglas&#34;&gt;https://github.com/GoogleCloudPlatform/berglas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;時限でイベントをトリガーする仕組み&lt;/li&gt;
-&lt;li&gt;最近どういう仕事をしてますか？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;あたり。&lt;/p&gt;</description></item><item><title>ElastiCache のノードタイプを変更する際の注意点</title><link>https://kanata2.dev/posts/elasticache-scaleup/</link><pubDate>Fri, 20 Dec 2019 10:00:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/elasticache-scaleup/</guid><description>
-&lt;p&gt;注意: この記事は &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を知っていれば(ほぼ)読む必要はありません。&lt;/p&gt;
-&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
-&lt;p&gt;今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。&lt;br /&gt;
-しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。&lt;br /&gt;
-(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)&lt;/p&gt;
-&lt;h3 id=&#34;原因-事前にやっておくべきこと&#34;&gt;原因・事前にやっておくべきこと&lt;/h3&gt;
-&lt;p&gt;結論から述べると、&lt;a href=&#34;https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html&#34;&gt;ドキュメント&lt;/a&gt;に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。&lt;br /&gt;
-AWS CLI であれば &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を使うのが良いです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
-&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleUpModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.10xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.12xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.24xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.4xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.8xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.16xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.4xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.8xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.12xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.24xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.4xlarge&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleDownModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.micro&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.small&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.micro&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.small&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;なぜ変更できないのか&#34;&gt;なぜ変更できないのか&lt;/h3&gt;
-&lt;p&gt;ドキュメントには詳細な仕様は明記されていません。&lt;br /&gt;
-今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。&lt;br /&gt;
-また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。&lt;/p&gt;
-&lt;h3 id=&#34;どうしても変更したい&#34;&gt;どうしても変更したい&lt;/h3&gt;
-&lt;p&gt;という場合もあるかと思います。その場合は、&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;同ノードタイプの現在よりメモリの小さいものに一旦変更
-&lt;ul&gt;
-&lt;li&gt;例: m4.4xlarge -&amp;gt; m4.2xlarge&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;当初変更予定だったノードタイプに変更
-&lt;ul&gt;
-&lt;li&gt;例: m4.2xlarge -&amp;gt; m5.4xlarge&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)&lt;/p&gt;</description></item><item><title>Hugo &#43; GitHub Pages &#43; GitHub Actions でこの記事を世に届けている</title><link>https://kanata2.dev/posts/hugo-and-github-pages-and-github-actions/</link><pubDate>Wed, 11 Sep 2019 12:10:48 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/hugo-and-github-pages-and-github-actions/</guid><description>
-&lt;p&gt;最近自分のアカウントも GitHub Actions が有効になったので、&lt;br /&gt;
-早速使ってみようと思いこの GitHub Pages を Actions でリリースするようにしてみた。&lt;br /&gt;
-実際の YAML を見るのが早いと思うので貼る。以下の通り。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;name&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;publish&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;on&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;push&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;branches&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;develop&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;jobs&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;build-deploy&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;runs-on&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;ubuntu-latest&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;steps&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;uses&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;actions/checkout@master&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;name&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;build&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;uses&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;peaceiris/actions-hugo@v0&lt;span class=&#34;m&#34;&gt;.58.1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;with&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;args&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;--gc&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;--minify&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;--cleanDestinationDir&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;name&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;deploy&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;uses&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;peaceiris/actions-gh-pages@v2&lt;span class=&#34;m&#34;&gt;.2.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;env&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;ACTIONS_DEPLOY_KEY&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;${{&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;secrets.ACTIONS_DEPLOY_KEY&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;}}&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;PUBLISH_BRANCH&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;master&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;PUBLISH_DIR&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;./public&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;すでに世に出回っている Action が便利なのでそれを使うだけの記事になってしまった。&lt;/p&gt;
-&lt;h4 id=&#34;参考&#34;&gt;参考&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/marketplace/actions/deploy-action-for-github-pages&#34;&gt;https://github.com/marketplace/actions/deploy-action-for-github-pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>ハローワールド</title><link>https://kanata2.dev/posts/my-first-post/</link><pubDate>Tue, 10 Sep 2019 00:35:16 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/my-first-post/</guid><description>&lt;p&gt;文章を書きたいけどどこに書こうか迷った結果 GitHub Pages にたどり着いた。&lt;/p&gt;</description></item></channel></rss>
+Touch ID がとてつもなく便利(社内のサービスでも Touch ID を使えるものがあったりする)なので、Magic Trackpad に Touch ID 搭載してくれたら即買いなんだけどなー。&lt;/p>
+&lt;h3 id="shirobako-の菅野さんの言葉を定期的に思い出す">SHIROBAKO の菅野さんの言葉を定期的に思い出す&lt;/h3>
+&lt;p>特に何があったとかではないんだけど、タイミングよく思い出したので書く。&lt;/p>
+&lt;blockquote>
+&lt;p>これをわしが描く意味って何だろう。&lt;/p>
+&lt;/blockquote>
+&lt;p>これとか&lt;/p>
+&lt;blockquote>
+&lt;p>アニメーターも人間だから、この仕事はお前にしかできないって言われたいんだよね。&lt;/p>
+&lt;/blockquote>
+&lt;p>これ。ちなみに第12話。&lt;/p>
+&lt;p>自分も何のコンテキストもなく決まった仕事をただ渡されるのはちょっと苦手かもしれない。&lt;br>
+菅野さんみたく、この仕事はお前にしかできないって言われたいのかもしれないし、&lt;br>
+せっかくプロジェクトやチームに所属しているのに、言われたことだけをやる関係性になるのが嫌なのかもしれない。&lt;br>
+自分もなにかを依頼するときは気をつけようとふと思った。&lt;/p></description></item><item><title>2020/04/28</title><link>https://kanata2.dev/posts/2020-04-29_review-barocco/</link><pubDate>Wed, 29 Apr 2020 02:42:26 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/2020-04-29_review-barocco/</guid><description>&lt;p>この記事は新しく買ったものが届いて嬉しくなって書いたただの日記です。&lt;/p>
+&lt;h3 id="barocco-md770">BAROCCO MD770&lt;/h3>
+&lt;p>これ: &lt;a href="https://www.archisite.co.jp/products/mistel/barocco-md770-rgb/">https://www.archisite.co.jp/products/mistel/barocco-md770-rgb/&lt;/a>&lt;/p>
+&lt;p>&lt;figure class="center">
+&lt;img src="https://kanata2.dev/images/barocco-1.jpg"/> &lt;figcaption>
+&lt;h4>箱&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure class="center">
+&lt;img src="https://kanata2.dev/images/barocco-2.jpg"/> &lt;figcaption>
+&lt;h4>キーボード&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>自宅の開発環境を整えるためにも、まずはキーボードをと思って買った。単体のキーボードを買うのは人生で初めてで、普段は MacBook Pro の内蔵キーボードで過ごしている。(MBP のキーボード普通に使いやすくて好き)&lt;br>
+買うなら分割キーボードをと思っていたが、やはりすぐには慣れない。特に自分は右手の担当領域が大きいっぽくて、左分割されたキーボードのBをしきりに右手で押そうとしてしまう。矯正しないと&amp;hellip;&lt;/p>
+&lt;p>感想まとめ&lt;/p>
+&lt;ul>
+&lt;li>良い点
+&lt;ul>
+&lt;li>バックライトがきれいでテンション上がる&lt;/li>
+&lt;li>セパレート型なので自由に配置可能&lt;/li>
+&lt;li>Mac 向けの設定があって便利&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大変な点
+&lt;ul>
+&lt;li>不慣れたためにタイミング速度がかなり落ちる&lt;/li>
+&lt;li>ちょっと腕が疲れるかもしれない
+&lt;ul>
+&lt;li>パームレストとか買ったほうが良いのかな&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>一番右の列は個人的に不要
+&lt;ul>
+&lt;li>間違えて押すことがかなり多い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>MBP がスリープから復帰するとキーボードを認識しなくなる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>ちなみに、けっこう人気っぽい。Amazon はすでに売り切れていたのでツクモで買った。&lt;/p>
+&lt;h3 id="kraken-x">Kraken X&lt;/h3>
+&lt;p>これ: &lt;a href="https://www2.razer.com/jp-jp/gaming-audio/razer-kraken-x">https://www2.razer.com/jp-jp/gaming-audio/razer-kraken-x&lt;/a>&lt;/p>
+&lt;figure class="center">
+&lt;img src="https://kanata2.dev/images/kraken_x.jpg"/> &lt;figcaption>
+&lt;h4>箱&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>フルリモートに切り替わってオンラインミーティングがけっこう耳にダメージ与えてくるなと思ったのでキーボードを買う流れに乗ってヘッドセットを購入してみた。こちらも購入は初。普段は Pixel 3 XL を購入したときに付属されていたイヤフォンを使っていた。&lt;br>
+あんまり機能性みたいなものを求めていなかったので、おおむね満足している、、んだけどしばらく着用すると熱を帯びてくるのがしんどい。耳周りめっちゃ熱くなる。&lt;/p>
+&lt;h3 id="会社で-zoom-雑談ルームを作ってみた">会社で zoom 雑談ルームを作ってみた&lt;/h3>
+&lt;p>もともと技術の話があんまりできなかったり、エンジニア同士の交流が少ないと思っていたので、せっかくならと思ってそれらを達成する裏目標のもと雑談ルームを始めてみた。&lt;br>
+初回は2人来てくれた(少ない、、ｗ)が、2時間ぐらい色々喋れたので個人的にはやって良かった。ちょっと時間使いすぎた反省もあるので、もう少し短めにして週1ぐらいのペースでやれたらなと思う。&lt;/p>
+&lt;p>話した内容は&lt;/p>
+&lt;ul>
+&lt;li>自宅開発環境&lt;/li>
+&lt;li>Terraform の資格試験
+&lt;ul>
+&lt;li>&lt;a href="https://www.hashicorp.com/certification/">https://www.hashicorp.com/certification/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>フルリモートワークとVPN、ゼロトラストネットワーク&lt;/li>
+&lt;li>&lt;a href="https://github.com/GoogleCloudPlatform/berglas">https://github.com/GoogleCloudPlatform/berglas&lt;/a>&lt;/li>
+&lt;li>時限でイベントをトリガーする仕組み&lt;/li>
+&lt;li>最近どういう仕事をしてますか？&lt;/li>
+&lt;/ul>
+&lt;p>あたり。&lt;/p></description></item><item><title>ElastiCache のノードタイプを変更する際の注意点</title><link>https://kanata2.dev/posts/elasticache-scaleup/</link><pubDate>Fri, 20 Dec 2019 10:00:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/elasticache-scaleup/</guid><description>&lt;p>注意: この記事は &lt;code>aws elasticache list-allowed-node-type-modifications&lt;/code> を知っていれば(ほぼ)読む必要はありません。&lt;/p>
+&lt;h3 id="背景">背景&lt;/h3>
+&lt;p>今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。&lt;br>
+しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。&lt;br>
+(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)&lt;/p>
+&lt;h3 id="原因事前にやっておくべきこと">原因・事前にやっておくべきこと&lt;/h3>
+&lt;p>結論から述べると、&lt;a href="https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html">ドキュメント&lt;/a>に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。&lt;br>
+AWS CLI であれば &lt;code>aws elasticache list-allowed-node-type-modifications&lt;/code> を使うのが良いです。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">
+$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
+&lt;span class="o">{&lt;/span>
+&lt;span class="s2">&amp;#34;ScaleUpModifications&amp;#34;&lt;/span>: &lt;span class="o">[&lt;/span>
+&lt;span class="s2">&amp;#34;cache.m4.10xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m5.12xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m5.24xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.4xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.8xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.16xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.4xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.8xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.12xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.24xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.4xlarge&amp;#34;&lt;/span>
+&lt;span class="o">]&lt;/span>,
+&lt;span class="s2">&amp;#34;ScaleDownModifications&amp;#34;&lt;/span>: &lt;span class="o">[&lt;/span>
+&lt;span class="s2">&amp;#34;cache.m3.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.micro&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.small&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.micro&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.small&amp;#34;&lt;/span>
+&lt;span class="o">]&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="なぜ変更できないのか">なぜ変更できないのか&lt;/h3>
+&lt;p>ドキュメントには詳細な仕様は明記されていません。&lt;br>
+今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。&lt;br>
+また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。&lt;/p>
+&lt;h3 id="どうしても変更したい">どうしても変更したい&lt;/h3>
+&lt;p>という場合もあるかと思います。その場合は、&lt;/p>
+&lt;ol>
+&lt;li>同ノードタイプの現在よりメモリの小さいものに一旦変更&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>例: m4.4xlarge -&amp;gt; m4.2xlarge&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>当初変更予定だったノードタイプに変更&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>例: m4.2xlarge -&amp;gt; m5.4xlarge&lt;/li>
+&lt;/ul>
+&lt;p>という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)&lt;/p></description></item><item><title>Hugo + GitHub Pages + GitHub Actions でこの記事を世に届けている</title><link>https://kanata2.dev/posts/hugo-and-github-pages-and-github-actions/</link><pubDate>Wed, 11 Sep 2019 12:10:48 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/hugo-and-github-pages-and-github-actions/</guid><description>&lt;p>最近自分のアカウントも GitHub Actions が有効になったので、&lt;br>
+早速使ってみようと思いこの GitHub Pages を Actions でリリースするようにしてみた。&lt;br>
+実際の YAML を見るのが早いと思うので貼る。以下の通り。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">develop&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">build-deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v0.58.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">args&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>--&lt;span class="l">gc --minify --cleanDestinationDir&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v2.2.0&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">ACTIONS_DEPLOY_KEY&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">PUBLISH_BRANCH&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">PUBLISH_DIR&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>すでに世に出回っている Action が便利なのでそれを使うだけの記事になってしまった。&lt;/p>
+&lt;h4 id="参考">参考&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/marketplace/actions/deploy-action-for-github-pages">https://github.com/marketplace/actions/deploy-action-for-github-pages&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>ハローワールド</title><link>https://kanata2.dev/posts/my-first-post/</link><pubDate>Tue, 10 Sep 2019 00:35:16 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/my-first-post/</guid><description>&lt;p>文章を書きたいけどどこに書こうか迷った結果 GitHub Pages にたどり着いた。&lt;/p></description></item></channel></rss>

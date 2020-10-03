@@ -1,16 +1,24 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>back of flyer</title><link>https://kanata2.dev/</link><description>Recent content on back of flyer</description><generator>Hugo 0.58.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 24 May 2020 00:31:27 +0900</lastBuildDate><atom:link href="https://kanata2.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Posts</title><link>https://kanata2.dev/posts/</link><pubDate>Sun, 24 May 2020 00:31:27 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/</guid><description/></item><item><title>About me</title><link>https://kanata2.dev/about/</link><pubDate>Fri, 24 Jan 2020 02:25:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/about/</guid><description>&lt;ul&gt;
-&lt;li&gt;名前: 金谷直輝(Naoki Kanatani)&lt;/li&gt;
-&lt;li&gt;所属: CyberAgent, Inc.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;経歴:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2012 / 04 - 2016 / 03: 東京工業大学情報工学部&lt;/li&gt;
-&lt;li&gt;2016 / 04 - 2018 / 03: 東京工業大学情報理工学院&lt;/li&gt;
-&lt;li&gt;2018 / 04 - 現在: CyberAgent, Inc.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;リンク:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/kanata2n&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/kanata2&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/naoki-kanatani/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>back of flyer</title><link>https://kanata2.dev/</link><description>Recent content on back of flyer</description><generator>Hugo 0.75.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 24 May 2020 00:31:27 +0900</lastBuildDate><atom:link href="https://kanata2.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Posts</title><link>https://kanata2.dev/posts/</link><pubDate>Sun, 24 May 2020 00:31:27 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/</guid><description/></item><item><title>About me</title><link>https://kanata2.dev/about/</link><pubDate>Fri, 24 Jan 2020 02:25:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/about/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>名前: 金谷直輝(Naoki Kanatani)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>所属: CyberAgent, Inc.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>経歴:&lt;/p>
+&lt;ul>
+&lt;li>2012 / 04 - 2016 / 03: 東京工業大学情報工学部&lt;/li>
+&lt;li>2016 / 04 - 2018 / 03: 東京工業大学情報理工学院&lt;/li>
+&lt;li>2018 / 04 - 現在: CyberAgent, Inc.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>リンク:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/kanata2n">Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/kanata2">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.linkedin.com/in/naoki-kanatani/">LinkedIn&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>

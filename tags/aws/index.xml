@@ -1,62 +1,64 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>aws on back of flyer</title><link>https://kanata2.dev/tags/aws/</link><description>Recent content in aws on back of flyer</description><generator>Hugo 0.58.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 20 Dec 2019 10:00:00 +0900</lastBuildDate><atom:link href="https://kanata2.dev/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>ElastiCache のノードタイプを変更する際の注意点</title><link>https://kanata2.dev/posts/elasticache-scaleup/</link><pubDate>Fri, 20 Dec 2019 10:00:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/elasticache-scaleup/</guid><description>
-&lt;p&gt;注意: この記事は &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を知っていれば(ほぼ)読む必要はありません。&lt;/p&gt;
-&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
-&lt;p&gt;今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。&lt;br /&gt;
-しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。&lt;br /&gt;
-(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)&lt;/p&gt;
-&lt;h3 id=&#34;原因-事前にやっておくべきこと&#34;&gt;原因・事前にやっておくべきこと&lt;/h3&gt;
-&lt;p&gt;結論から述べると、&lt;a href=&#34;https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html&#34;&gt;ドキュメント&lt;/a&gt;に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。&lt;br /&gt;
-AWS CLI であれば &lt;code&gt;aws elasticache list-allowed-node-type-modifications&lt;/code&gt; を使うのが良いです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
-&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleUpModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.10xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.12xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m5.24xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.4xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.8xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.16xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.4xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.8xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.12xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.24xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r5.4xlarge&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;ScaleDownModifications&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m3.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.m4.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.2xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r3.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.large&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.r4.xlarge&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.micro&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t2.small&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.medium&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.micro&amp;#34;&lt;/span&gt;,
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;cache.t3.small&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;なぜ変更できないのか&#34;&gt;なぜ変更できないのか&lt;/h3&gt;
-&lt;p&gt;ドキュメントには詳細な仕様は明記されていません。&lt;br /&gt;
-今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。&lt;br /&gt;
-また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。&lt;/p&gt;
-&lt;h3 id=&#34;どうしても変更したい&#34;&gt;どうしても変更したい&lt;/h3&gt;
-&lt;p&gt;という場合もあるかと思います。その場合は、&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;同ノードタイプの現在よりメモリの小さいものに一旦変更
-&lt;ul&gt;
-&lt;li&gt;例: m4.4xlarge -&amp;gt; m4.2xlarge&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;当初変更予定だったノードタイプに変更
-&lt;ul&gt;
-&lt;li&gt;例: m4.2xlarge -&amp;gt; m5.4xlarge&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)&lt;/p&gt;</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>aws on back of flyer</title><link>https://kanata2.dev/tags/aws/</link><description>Recent content in aws on back of flyer</description><generator>Hugo 0.75.1 -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 20 Dec 2019 10:00:00 +0900</lastBuildDate><atom:link href="https://kanata2.dev/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>ElastiCache のノードタイプを変更する際の注意点</title><link>https://kanata2.dev/posts/elasticache-scaleup/</link><pubDate>Fri, 20 Dec 2019 10:00:00 +0900</pubDate><guid isPermaLink="true">https://kanata2.dev/posts/elasticache-scaleup/</guid><description>&lt;p>注意: この記事は &lt;code>aws elasticache list-allowed-node-type-modifications&lt;/code> を知っていれば(ほぼ)読む必要はありません。&lt;/p>
+&lt;h3 id="背景">背景&lt;/h3>
+&lt;p>今見ているサービスで RI の購入タイミングになったので、m4.4xlarge のものを m5.4xlarge に変更しようという話になりました。&lt;br>
+しかし、実際にオペレーションをしたところ変更ができなかったのでスケール時に確認しておくべきことなどを自分用にメモとして残しておきます。&lt;br>
+(いやその変更は直接は無理でしょ！と一瞬で分かった方には不要な記事です)&lt;/p>
+&lt;h3 id="原因事前にやっておくべきこと">原因・事前にやっておくべきこと&lt;/h3>
+&lt;p>結論から述べると、&lt;a href="https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/Scaling.RedisReplGrps.ScaleUp.html">ドキュメント&lt;/a>に記載してある通り、スケールアップ先として選択可能なノードとそうでないノードが存在します。&lt;br>
+AWS CLI であれば &lt;code>aws elasticache list-allowed-node-type-modifications&lt;/code> を使うのが良いです。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-sh" data-lang="sh">
+$ aws elasticache list-allowed-node-type-modifications --replication-group-id xxxxx
+&lt;span class="o">{&lt;/span>
+&lt;span class="s2">&amp;#34;ScaleUpModifications&amp;#34;&lt;/span>: &lt;span class="o">[&lt;/span>
+&lt;span class="s2">&amp;#34;cache.m4.10xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m5.12xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m5.24xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.4xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.8xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.16xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.4xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.8xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.12xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.24xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r5.4xlarge&amp;#34;&lt;/span>
+&lt;span class="o">]&lt;/span>,
+&lt;span class="s2">&amp;#34;ScaleDownModifications&amp;#34;&lt;/span>: &lt;span class="o">[&lt;/span>
+&lt;span class="s2">&amp;#34;cache.m3.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m3.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.m4.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.2xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r3.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.large&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.r4.xlarge&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.micro&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t2.small&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.medium&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.micro&amp;#34;&lt;/span>,
+&lt;span class="s2">&amp;#34;cache.t3.small&amp;#34;&lt;/span>
+&lt;span class="o">]&lt;/span>
+&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="なぜ変更できないのか">なぜ変更できないのか&lt;/h3>
+&lt;p>ドキュメントには詳細な仕様は明記されていません。&lt;br>
+今回のケースでは「別のノードタイプに変更する場合は現在よりメモリの小さいものには変更できない」というルールが存在していてそれに引っかかったのだと思われます。&lt;br>
+また、これ以外にも変更に関するルールは存在するようなので、必ず事前に調べておく必要があります。&lt;/p>
+&lt;h3 id="どうしても変更したい">どうしても変更したい&lt;/h3>
+&lt;p>という場合もあるかと思います。その場合は、&lt;/p>
+&lt;ol>
+&lt;li>同ノードタイプの現在よりメモリの小さいものに一旦変更&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>例: m4.4xlarge -&amp;gt; m4.2xlarge&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>当初変更予定だったノードタイプに変更&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>例: m4.2xlarge -&amp;gt; m5.4xlarge&lt;/li>
+&lt;/ul>
+&lt;p>という手順で理論的には変更可能です。(こちらはサポートケースでも案内されました)&lt;/p></description></item></channel></rss>
